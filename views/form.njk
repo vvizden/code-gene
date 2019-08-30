@@ -1,0 +1,19 @@
+<el-form
+  v-if="formDisplay"
+  :model="form"
+  :rules="rules"
+  ref="form"
+  label-width="100px"
+  :size="unifiedSize"
+  :disabled="formDisabled"
+>
+{% for field in fields %}
+  <el-form-item label="{{field.comment}}" prop="{{field.propertyName}}">
+    <el-input
+      v-model="form.{{field.propertyName}}"
+      placeholder="{{field.comment}}"
+      clearable
+    ></el-input>
+  </el-form-item>
+{% endfor %}
+</el-form>
