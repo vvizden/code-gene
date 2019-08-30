@@ -1,0 +1,15 @@
+{% extends parentTemp %}
+{% block template -%}
+  <div class="hd-col-container">
+    <el-row class="margin-btm-16">
+      <el-col :span="24">
+        <el-button v-if="{{table.name}}_add" @click="handleCreate" type="primary" :size="unifiedSize">创 建</el-button>
+      </el-col>
+    </el-row>
+    {% block table %}{% endblock table %}
+    {% block pagination %}{% endblock pagination %}
+    <el-dialog v-dialog-drag :title="formDialogTitle[dialogStatus]" :visible.sync="formDialogVisible" :close-on-click-modal="false" @closed="handleFormDialogClosed">
+      {% block form %}{% endblock form %}
+    </el-dialog>
+  </div>
+{%- endblock template %}

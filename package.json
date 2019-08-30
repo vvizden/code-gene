@@ -1,0 +1,18 @@
+{
+  "name": "code-gene",
+  "version": "1.0.0",
+  "description": "code-gene",
+  "main": "app.js",
+  "scripts": {
+    "generate": "node app.js"
+  },
+  "keywords": [
+    "node.js",
+    "Nunjucks"
+  ],
+  "author": "vviz",
+  "license": "MIT",
+  "dependencies": {
+    "nunjucks": "^3.2.0"
+  }
+}
