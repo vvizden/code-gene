@@ -1,4 +1,4 @@
-<el-table :data="tableData" v-loading="tableLoading" element-loading-text="给我一点时间" stripe="stripe" border="border" fit="fit" highlight-current-row="highlight-current-row" style="width: 100%;flex: auto;" height="300px" :size="unifiedSize" :row-key="row=>row.{{key.propertyName}}">
+<el-table :data="tableData" v-loading="tableLoading" element-loading-text="给我一点时间" stripe="stripe" border="border" fit="fit" highlight-current-row="highlight-current-row" style="width: 100%;" height="100%" :size="unifiedSize" :row-key="row=>row.{{key.propertyName}}">
     {% for field in fields %}
         <el-table-column align="center" label="{{field.comment}}">
             <template slot-scope="{ row }">

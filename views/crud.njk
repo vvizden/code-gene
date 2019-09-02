@@ -1,12 +1,12 @@
 {% extends parentTemp %}
 {% block template -%}
   <div class="hd-col-container">
-    <el-row class="margin-btm-16">
-      <el-col :span="24">
-        <el-button v-if="{{name}}_add" @click="handleCreate" type="primary" :size="unifiedSize">创 建</el-button>
-      </el-col>
-    </el-row>
-    {% include "table.njk" %}
+    <div class="margin-btm-16 flex-box-row">
+      <el-button v-if="{{name}}_add" @click="handleCreate" type="primary" :size="unifiedSize">创 建</el-button>
+    </div>
+    <div style="height: 300px;flex:auto;">
+      {% include "table.njk" %}
+    </div>
     {% include "pagination.njk" %}
     <el-dialog v-dialog-drag :title="formDialogTitle" :visible.sync="formDialogVisible" :close-on-click-modal="false" @closed="handleFormDialogClosed">
       {% include "form.njk" %}
