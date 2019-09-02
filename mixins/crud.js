@@ -1,3 +1,5 @@
+import { mapGetters } from 'vuex';
+
 export default function() {
   return {
     data() {
@@ -32,7 +34,7 @@ export default function() {
       initForm() {
         this.form = {};
       },
-      handleDialogClosed() {
+      handleFormDialogClosed() {
         this.formDisplay = false;
         this.initForm();
       },

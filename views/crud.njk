@@ -13,3 +13,24 @@
     </el-dialog>
   </div>
 {%- endblock template %}
+{% block script -%}
+import crud from "@/mixins/crud.js";
+
+export default {
+    name: "table_{{name}}",
+    mixins: [crud],
+    data(){
+        return {
+            {{name}}_add: "",
+            {{name}}_upd: "",
+            {{name}}_del: "",
+        };
+    },
+    created(){
+        this.{{name}}_add = this.permissions[{{name}}_add];
+        this.{{name}}_upd = this.permissions[{{name}}_upd];
+        this.{{name}}_del = this.permissions[{{name}}_del];
+    }
+};
+{%- endblock script %}
+

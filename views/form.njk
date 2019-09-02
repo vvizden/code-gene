@@ -16,4 +16,13 @@
     ></el-input>
   </el-form-item>
 {% endfor %}
+<el-form-item>
+  <el-button @click="cancel" :disabled="formDisabled">取 消</el-button>
+  <el-button
+    type="primary"
+    @click="create"
+    :loading="formDisabled"
+    :disabled="formDisabled"
+  >{% raw %}{{{% endraw %} formDisabled ? '正在提交' : '提 交' {% raw %}}}{% endraw %} </el-button>
+</el-form-item>
 </el-form>
