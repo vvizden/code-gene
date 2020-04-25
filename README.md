@@ -1,2 +1,2 @@
 # code-gene
-code-generator for vue by nunjucks.
+code-generator for vue-single-page by Nunjucks.
