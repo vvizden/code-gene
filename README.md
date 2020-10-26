@@ -1,2 +1,2 @@
 # code-generator
-code-generator for vue-single-page by Nunjucks.
+code-generator based on Nunjucks.
